@@ -1,5 +1,4 @@
 package FruitJuiceMachine;
-
 public class DispenserType {
     private int numberOfItems;
     private int cost;
