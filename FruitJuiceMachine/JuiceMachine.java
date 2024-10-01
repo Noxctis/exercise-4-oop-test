@@ -1,8 +1,8 @@
 import javax.swing.JOptionPane;
 
 public class JuiceMachine {
-    private CashRegister cashRegister;
-    private DispenserType[] dispensers;
+    private final CashRegister cashRegister;
+    private final DispenserType[] dispensers;
 
     /**
      * Initializes the Juice Machine with default products and costs.
@@ -105,7 +105,7 @@ public class JuiceMachine {
      * Main method that runs the Juice Machine program.
      */
     public void run() {
-        boolean keepRunning = true;
+        var keepRunning = true;
         while (keepRunning) {
             int productIndex = selectProduct(); // Show selection and get user input
 
