@@ -1,4 +1,5 @@
 import javax.swing.JOptionPane;
+//wait haha test
 
 public class JuiceMachine {
     private final CashRegister cashRegister;
