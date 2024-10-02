@@ -1,3 +1,16 @@
+/*
+============================================================================
+FILE : CashRegister.java
+AUTHOR : Cyril John Christian A. Calo
+DESCRIPTION : Handles cash register to store and process purchases/money
+COPYRIGHT : Sept 28 2024
+REVISION HISTORY
+Date: By: Description:
+Cyril John Christian A. Calo === Sept 28 2024
+Created File
+============================================================================
+*/
+
 public class CashRegister {
     private int cashOnHand;
 
