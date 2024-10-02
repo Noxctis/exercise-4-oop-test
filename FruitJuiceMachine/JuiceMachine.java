@@ -1,5 +1,15 @@
+/*
+============================================================================
+FILE : JuiceMachine.java
+AUTHOR : Chrys Sean T. Sevilla
+DESCRIPTION : Run the JuiceMachine
+COPYRIGHT : 28-09-2024
+REVISION HISTORY
+Date: By: Description:
+
+============================================================================
+*/
 import javax.swing.JOptionPane;
-//wait haha test
 
 public class JuiceMachine {
     private final CashRegister cashRegister;
