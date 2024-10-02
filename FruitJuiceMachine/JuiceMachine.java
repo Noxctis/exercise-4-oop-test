@@ -116,7 +116,7 @@ public class JuiceMachine {
      * Main method that runs the Juice Machine program.
      */
     public void run() {
-        var keepRunning = true;
+        boolean keepRunning = true;
         while (keepRunning) {
             int productIndex = selectProduct(); // Show selection and get user input
 
@@ -189,14 +189,15 @@ public class JuiceMachine {
         boolean validInput = false;
 
         while (!validInput) {
-            String quantityStr = JOptionPane.showInputDialog(null, "There are " + availableStock + " items available. How many would you like to purchase?", "Select Quantity", JOptionPane.PLAIN_MESSAGE);
+            String quantityStr = JOptionPane.showInputDialog(null, "There are " + availableStock + " items at " + dispenser.getCost()+ " each" + " available. How many would you like to purchase?", "Select Quantity", JOptionPane.PLAIN_MESSAGE);
 
             if (quantityStr == null) {
                 // Handle cancel action
                 int confirm = JOptionPane.showConfirmDialog(null, "Are you sure you want to exit?", "Confirm Exit", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
                 if (confirm == JOptionPane.YES_OPTION) {
-                    JOptionPane.showMessageDialog(null, "Thank you for using the Juice Machine. Goodbye!", "Goodbye", JOptionPane.INFORMATION_MESSAGE);
-                    System.exit(0);
+                    //JOptionPane.showMessageDialog(null, "Thank you for using the Juice Machine. Goodbye!", "Goodbye", JOptionPane.INFORMATION_MESSAGE);
+                    //System.exit(0);
+                    return 0;
                 }
             } else {
                 try {
