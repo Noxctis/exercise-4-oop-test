@@ -49,11 +49,13 @@ public class JuiceMachine {
         while (attempts < 2 && totalDeposited < cost) {
             int deposit = getValidPayment("Please deposit " + (cost - totalDeposited) + " cents", "Payment");
             totalDeposited += deposit;
-
-            if (totalDeposited >= cost) {
+            if (totalDeposited >= cost && (totalDeposited-cost <= cashRegister.getCurrentBalance())) {
                 successfulTransaction = true;
                 break;
-            } else {
+            } else if(totalDeposited > cashRegister.getCurrentBalance()) {
+                JOptionPane.showMessageDialog(null, "Not enough change available, please input lesser amount ", "Insufficient Funds", JOptionPane.WARNING_MESSAGE);
+            }
+            else{
                 JOptionPane.showMessageDialog(null, "You still need to deposit " + (cost - totalDeposited) + " cents.", "Insufficient Funds", JOptionPane.WARNING_MESSAGE);
             }
 
