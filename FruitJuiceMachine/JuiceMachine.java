@@ -33,7 +33,7 @@ public class JuiceMachine {
      * @param productIndex The index of the selected product
      * @param quantity The number of items selected
      */
-    public void sellProduct(int productIndex, int quantity) {
+    private void sellProduct(int productIndex, int quantity) {
         if (productIndex < 0 || productIndex >= dispensers.length) {
             JOptionPane.showMessageDialog(null, "Invalid selection.", "Error", JOptionPane.ERROR_MESSAGE);
             return;
@@ -117,7 +117,7 @@ public class JuiceMachine {
     /**
      * Main method that runs the Juice Machine program.
      */
-    public void run() {
+    private void run() {
         boolean keepRunning = true;
         while (keepRunning) {
             int productIndex = selectProduct(); // Show selection and get user input
@@ -145,7 +145,7 @@ public class JuiceMachine {
      * Uses buttons for product selection.
      * @return The index of the selected product, or -1 if balance check or exit is chosen
      */
-    public int selectProduct() {
+    private int selectProduct() {
         Object[] options = {"Apple Juice", "Orange Juice", "Mango Lassi", "Fruit Punch", "Exit", "Check Balance"};
         int selection = JOptionPane.showOptionDialog(
                 null,
@@ -184,7 +184,7 @@ public class JuiceMachine {
      * @param productIndex The index of the selected product
      * @return The number of items selected, or -1 if canceled
      */
-    public int selectQuantity(int productIndex) {
+    private  int selectQuantity(int productIndex) {
         DispenserType dispenser = dispensers[productIndex];
         int availableStock = dispenser.getNoOfItems();
         int quantity = -1;
