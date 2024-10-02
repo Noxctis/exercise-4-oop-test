@@ -4,7 +4,7 @@ FILE : DispenserType.java
 AUTHOR : Sid Andre Bordario
 DESCRIPTION : Handles the number of stock of the items
 COPYRIGHT : created 08/28/2024
-REVISION HISTORY
+REVISION HISTORY:
 ============================================================================
 */
 public class DispenserType {
